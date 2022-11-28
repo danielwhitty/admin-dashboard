@@ -1,0 +1,23 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main-content {
+    grid-area: main-content;
+}
