@@ -10,7 +10,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 5fr;
     grid:   'sidebar header'
             'sidebar main-content';
@@ -20,6 +20,9 @@ body {
     grid-area: sidebar;
     background-color: #1892d3;
     color: white;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 32px;
 }
 
 .sidebar ul {
@@ -33,9 +36,32 @@ body {
         brightness(107%) contrast(102%);
 }
 
+.sidebar-title,
+.sidebar li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
 .header {
     grid-area: header;
     background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 15px -15px gray;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-top-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    grid-row: 1;
+}
+
+.header-bottom-row {
+
 }
 
 .main-content {
